@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="author" content="Dr. Mustafa Gürkan Kutucularoğlu">
+  <meta name="description" content="Dr. Mustafa Gürkan Kutucularoğlu — Aydın'da kardiyoloji uzmanı. Girişimsel kardiyoloji, kompleks PCI, CTO ve TAVI alanlarında mesleki bilgi ve içerikler.">
+  <meta property="og:title" content="Dr. Mustafa Gürkan Kutucularoğlu | Kardiyoloji Uzmanı">
+  <meta property="og:description" content="Kardiyoloji, girişimsel işlemler ve kalp sağlığı hakkında mesleki bilgi ve içerikler.">
+  <meta property="og:type" content="website">
+  <title>Dr. Mustafa Gürkan Kutucularoğlu | Kardiyoloji Uzmanı · Aydın</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #111c2d;
+      --panel2: #152338;
+      --text: #edf2f7;
+      --muted: #a9b6c8;
+      --line: rgba(210,225,245,.14);
+      --accent: #8ec9c0;
+      --accent2: #d6e9e5;
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7; -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(11,18,32,.88); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { text-decoration: none; font-size: .9rem; font-weight: 700; letter-spacing: .02em; }
+    .brand span { color: var(--accent); }
+    nav { display: flex; gap: 24px; align-items: center; }
+    nav a { text-decoration: none; color: var(--muted); font-size: .86rem; }
+    nav a:hover, nav a:focus-visible { color: var(--accent2); }
+    .hero { padding: clamp(70px, 10vw, 132px) 0 78px; }
+    .eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: .18em; font-size: .76rem; font-weight: 700; }
+    h1, h2, h3 { line-height: 1.2; }
+    h1, h2 { font-family: "Libre Baskerville", Georgia, serif; font-weight: 400; }
+    h1 { font-size: clamp(2.4rem, 6.2vw, 5.25rem); letter-spacing: -.055em; max-width: 900px; margin: 20px 0; }
+    h1 span { color: var(--accent); }
+    .lead { color: var(--muted); max-width: 680px; font-size: clamp(1rem, 2vw, 1.18rem); }
+    .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .tag { border: 1px solid var(--line); color: #dce6ef; border-radius: 999px; padding: 7px 13px; font-size: .8rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; padding: 12px 18px; text-decoration: none; font-weight: 600; font-size: .9rem; border: 1px solid var(--line); }
+    .btn.primary { background: var(--accent); color: #102027; border-color: var(--accent); }
+    .btn.secondary { color: var(--text); }
+    section { padding: 78px 0; border-top: 1px solid var(--line); }
+    .section-head { display: flex; justify-content: space-between; gap: 30px; align-items: end; margin-bottom: 34px; }
+    h2 { font-size: clamp(1.8rem, 4vw, 3rem); margin: 10px 0 0; letter-spacing: -.04em; }
+    h3 { font-size: 1.05rem; margin: 0 0 10px; }
+    .section-note { color: var(--muted); max-width: 470px; margin: 0; font-size: .94rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 24px; }
+    .card p { color: var(--muted); margin: 0; font-size: .92rem; }
+    .number { color: var(--accent); font-size: .75rem; letter-spacing: .12em; font-weight: 700; margin-bottom: 24px; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .body-copy { color: var(--muted); }
+    .timeline { border-left: 1px solid rgba(142,201,192,.5); padding-left: 24px; }
+    .event { position: relative; margin: 0 0 26px; }
+    .event::before { content: ""; position: absolute; left: -29px; top: 9px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
+    .event time { color: var(--accent); font-size: .78rem; font-weight: 700; }
+    .event p { color: var(--muted); margin: 4px 0 0; font-size: .9rem; }
+    .articles .card { display: flex; flex-direction: column; min-height: 220px; }
+    .articles .card a { color: var(--accent2); text-decoration: none; font-weight: 600; font-size: .88rem; margin-top: auto; padding-top: 20px; }
+    .articles .card a:hover { text-decoration: underline; }
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 20px; }
+    .contact-item { padding: 15px 0; border-bottom: 1px solid var(--line); }
+    .contact-item:last-child { border-bottom: 0; }
+    .contact-item small { display: block; color: var(--muted); margin-bottom: 3px; }
+    .contact-item a { color: var(--accent2); text-decoration: none; overflow-wrap: anywhere; }
+    .notice { border-left: 3px solid var(--accent); background: rgba(142,201,192,.08); padding: 16px 18px; color: var(--muted); font-size: .88rem; border-radius: 0 6px 6px 0; }
+    footer { border-top: 1px solid var(--line); padding: 25px 0; color: var(--muted); font-size: .8rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .footer-inner a { color: var(--muted); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    @media (max-width: 760px) {
+      .nav { align-items: flex-start; flex-direction: column; justify-content: center; padding: 15px 0; gap: 8px; }
+      nav { width: 100%; gap: 16px; overflow-x: auto; padding-bottom: 2px; }
+      nav a { white-space: nowrap; font-size: .8rem; }
+      .grid { grid-template-columns: 1fr; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+      .section-head { display: block; }
+      .section-note { margin-top: 15px; }
+      section { padding: 58px 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#anasayfa">MGK <span>·</span> Kardiyoloji</a>
+      <nav aria-label="Ana menü">
+        <a href="#hakkimda">Hakkımda</a>
+        <a href="#alanlar">Çalışma Alanları</a>
+        <a href="#yazilar">Yazılar</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap hero" id="anasayfa">
+      <div class="eyebrow">Kardiyoloji · Aydın</div>
+      <h1>Dr. Mustafa Gürkan<br><span>Kutucularoğlu</span></h1>
+      <p class="lead">Kardiyoloji Uzmanı. Kalp ve damar sağlığı, girişimsel kardiyoloji ve güncel klinik uygulamalar hakkında mesleki bilgi ve hasta bilgilendirme içerikleri.</p>
+      <div class="tags" aria-label="Mesleki çalışma alanları">
+        <span class="tag">Girişimsel Kardiyoloji</span>
+        <span class="tag">Kompleks PCI</span>
+        <span class="tag">Kronik Total Oklüzyon (CTO)</span>
+        <span class="tag">TAVI</span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn primary" href="#hakkimda">Profili incele</a>
+        <a class="btn secondary" href="#yazilar">Yazıları keşfet</a>
+      </div>
+    </div>
+
+    <section id="hakkimda">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Profil</div><h2>Hakkımda</h2></div>
+          <p class="section-note">Klinik deneyim, akademik merak ve güncel kanıtların kesişiminde kardiyoloji.</p>
+        </div>
+        <div class="about-grid">
+          <div class="body-copy">
+            <p>Kardiyoloji alanında çalışan bir hekim olarak odağım; kalp-damar hastalıklarının değerlendirilmesi, koroner girişimler ve klinik karar süreçlerinde güncel bilimsel kanıtların kullanılmasıdır.</p>
+            <p>Bu site, mesleki ilgi alanlarımı ve kardiyolojiye ilişkin genel bilgilendirme yazılarını bir araya getirmek amacıyla hazırlanmıştır. Buradaki içerikler bireysel muayene veya hekim değerlendirmesinin yerine geçmez.</p>
+          </div>
+          <div class="timeline" aria-label="Eğitim ve mesleki geçmiş">
+            <div class="event"><time>2002</time><h3>Akdeniz Üniversitesi Tıp Fakültesi</h3><p>Tıp eğitimi</p></div>
+            <div class="event"><time>2008</time><h3>Kardiyoloji uzmanlığı</h3><p>Ankara Numune Eğitim ve Araştırma Hastanesi</p></div>
+            <div class="event"><time>2011–2026</time><h3>Aydın Devlet Hastanesi</h3><p>Kardiyoloji</p></div>
+            <div class="event"><time>2026–</time><h3>Aydın Şehir Hastanesi</h3><p>Kardiyoloji</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="alanlar">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Mesleki odak</div><h2>Çalışma Alanları</h2></div>
+          <p class="section-note">Aşağıdaki başlıklar mesleki ilgi ve çalışma alanlarını tanımlar; kişiye özel tıbbi öneri yerine geçmez.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><div class="number">01 / KORONER</div><h3>Girişimsel Kardiyoloji</h3><p>Koroner arter hastalığında kateter temelli tanı ve tedavi yaklaşımları.</p></article>
+          <article class="card"><div class="number">02 / KOMPLEKS PCI</div><h3>Kompleks Koroner Girişimler</h3><p>Bifurkasyon, kalsifik lezyonlar ve kompleks koroner anatomiye yönelik teknik konular.</p></article>
+          <article class="card"><div class="number">03 / CTO</div><h3>Kronik Total Oklüzyon</h3><p>CTO girişimlerinde strateji seçimi, tel geçiş teknikleri ve işlem planlaması.</p></article>
+          <article class="card"><div class="number">04 / KAPAK</div><h3>TAVI</h3><p>Transkateter aort kapak implantasyonunda görüntüleme, planlama ve risk değerlendirmesi.</p></article>
+          <article class="card"><div class="number">05 / KLİNİK</div><h3>Klinik Karar Destek</h3><p>Kılavuzlar, risk skorları ve dijital araçların klinik iş akışında değerlendirilmesi.</p></article>
+          <article class="card"><div class="number">06 / KORUYUCU</div><h3>Kalp Sağlığı</h3><p>Kalp-damar risk faktörleri, yaşam tarzı ve koruyucu kardiyoloji hakkında genel bilgi.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="yazilar">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Bilgi ve değerlendirme</div><h2>Yazılar</h2></div>
+          <p class="section-note">Bu bölüm örnek içerik başlıklarıyla hazırlanmıştır. Yayınlamadan önce her bağlantı gerçek yazı sayfasına yönlendirilmelidir.</p>
+        </div>
+        <div class="grid articles">
+          <article class="card"><div class="number">KORONER</div><h3>CTO nedir?</h3><p>Kronik total oklüzyon kavramı ve girişimsel tedavinin temel ilkeleri.</p><a href="mailto:drgurkan78@gmail.com?subject=CTO%20yaz%C4%B1s%C4%B1%20hakk%C4%B1nda">Yazı hakkında iletişim →</a></article>
+          <article class="card"><div class="number">KAPAK</div><h3>TAVI nedir?</h3><p>Aort kapak darlığında transkateter tedavi yaklaşımına genel bakış.</p><a href="mailto:drgurkan78@gmail.com?subject=TAVI%20yaz%C4%B1s%C4%B1%20hakk%C4%B1nda">Yazı hakkında iletişim →</a></article>
+          <article class="card"><div class="number">KORONER</div><h3>Kompleks koroner girişimler</h3><p>Koroner anatomi, işlem planlaması ve karar süreçlerinde temel kavramlar.</p><a href="mailto:drgurkan78@gmail.com?subject=Kompleks%20PCI%20yaz%C4%B1s%C4%B1%20hakk%C4%B1nda">Yazı hakkında iletişim →</a></article>
+          <article class="card"><div class="number">KORUYUCU KARDİYOLOJİ</div><h3>Evde tansiyon ölçümü</h3><p>Ölçüm tekniği, düzenli kayıt ve sonuçların hekimle paylaşılması hakkında genel bilgi.</p><a href="mailto:drgurkan78@gmail.com?subject=Evde%20tansiyon%20%C3%B6l%C3%A7%C3%BCm%C3%BC%20yaz%C4%B1s%C4%B1">Yazı hakkında iletişim →</a></article>
+          <article class="card"><div class="number">RİTİM</div><h3>Atriyal fibrilasyon</h3><p>Ritim bozukluğunun genel özellikleri ve klinik değerlendirmede dikkate alınan unsurlar.</p><a href="mailto:drgurkan78@gmail.com?subject=Atriyal%20fibrilasyon%20yaz%C4%B1s%C4%B1">Yazı hakkında iletişim →</a></article>
+          <article class="card"><div class="number">YAŞAM TARZI</div><h3>Kalp sağlığı ve egzersiz</h3><p>Fiziksel aktivitenin kalp-damar sağlığındaki yeri hakkında genel bilgilendirme.</p><a href="mailto:drgurkan78@gmail.com?subject=Kalp%20sa%C4%9Fl%C4%B1%C4%9F%C4%B1%20ve%20egzersiz%20yaz%C4%B1s%C4%B1">Yazı hakkında iletişim →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="iletisim">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Bağlantı</div><h2>İletişim</h2></div>
+          <p class="section-note">Mesleki iletişim ve siteyle ilgili geri bildirimler için aşağıdaki kanalları kullanabilirsiniz.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="card">
+            <div class="contact-item"><small>E-posta</small><a href="mailto:drgurkan78@gmail.com">drgurkan78@gmail.com</a></div>
+            <div class="contact-item"><small>Mesleki kurum</small><span>Aydın Şehir Hastanesi · Kardiyoloji</span></div>
+            <div class="contact-item"><small>Instagram</small><a href="https://www.instagram.com/drmgkkardiyoloji/" target="_blank" rel="noopener noreferrer">@drmgkkardiyoloji ↗</a></div>
+          </div>
+          <div class="notice">
+            <strong>Önemli sağlık bilgilendirmesi</strong><br>
+            Bu internet sitesi genel bilgilendirme amacı taşır; tanı, tedavi veya kişiye özel tıbbi danışmanlık sunmaz. Acil durumlarda 112 Acil Çağrı Merkezi'ni arayın veya en yakın acil servise başvurun. E-posta üzerinden hassas sağlık verisi, kimlik bilgisi veya tıbbi belge göndermeyin.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year">2026</span> Dr. Mustafa Gürkan Kutucularoğlu</span>
+      <span>Bilgilendirme amaçlıdır; hekim değerlendirmesinin yerine geçmez.</span>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
